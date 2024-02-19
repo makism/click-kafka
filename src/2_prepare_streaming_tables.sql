@@ -27,12 +27,14 @@ SETTINGS
     kafka_group_name = 'click-group',
     kafka_format = 'JSONEachRow';
 
+DROP TABLE house.events;
+
 CREATE TABLE IF NOT EXISTS house.events
 (
     artist String,
     song String,
     duration Float32,
-    ts UInt32,
+    ts UInt128,
     sessionId UInt32,
     auth String,
     level String,
@@ -46,7 +48,7 @@ CREATE TABLE IF NOT EXISTS house.events
     userId UInt32,
     lastName String,
     firstName String,
-    gender Enum('M'=1, 'F'=2),
+    gender Enum8(''=0, 'M'=1, 'F'=2),
     registration UInt128
 )
 ENGINE = ReplacingMergeTree()
