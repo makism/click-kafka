@@ -1,0 +1,7 @@
+<clickhouse>
+    <kafka>
+        <security_protocol>plaintext</security_protocol>
+        <enable_ssl_certificate_verification>false</enable_ssl_certificate_verification>
+        <ssl_endpoint_identification_algorithm>none</ssl_endpoint_identification_algorithm>
+    </kafka>
+</clickhouse>
